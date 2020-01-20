@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="4045e8f5-46c6-47de-a56c-c5b39113b86c" activeEnvironment="Default environment" name="242E2ERoadNB" lastOpened="2018-12-24T09:47:22.914Z" resourceRoot="" encryptionMode="Not encrypted" updated="3.0.0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4045e8f5-46c6-47de-a56c-c5b39113b86cfileName">242E2ERoadNB-soapui-project</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>

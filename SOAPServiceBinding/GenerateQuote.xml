@@ -1,0 +1,1439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="a2154882-ccad-407a-86f4-8168d9e0e284" isOneWay="false" action="GenerateQuote" name="GenerateQuote" bindingOperationName="GenerateQuote" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3e3fd8b3-8dcf-4183-b29d-e2e2b0118eebfileName">GenerateQuote</con:setting>
+    <con:setting id="dee89591-5f8e-462c-8a95-23edfd23070ffileName">GenerateQuote</con:setting>
+    <con:setting id="a2154882-ccad-407a-86f4-8168d9e0e284fileName">GenerateQuote</con:setting>
+  </con:settings>
+  <con:call id="4fc459a2-8f72-4796-922f-f401ba3f00c0" defaultOutgoingWss="" defaultIncomingWss="" name="RoadE2e1">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://esbpreprod:18026/SOAPServiceBinding/BSROS_GenerateQuote_NB/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB.2" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product.2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gen:GenerateQuoteRequest>
+         <mes:RequestHeader>
+            <mes:TransactionId>RO-NB-1611-313</mes:TransactionId>
+            <mes:Version>1.0</mes:Version>
+            <mes:RequestDateTime>2018-04-01T00:00:00</mes:RequestDateTime>
+            <mes:Source>
+               <mes:Domain>SALES</mes:Domain>
+               <mes:Channel>SanityTesting</mes:Channel>
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>
+               <mes:Name>Pricing Services</mes:Name>
+               <mes:User>PS Testing</mes:User>
+            </mes:Source>
+         </mes:RequestHeader>
+         <gen:ProductList>
+            <prod:EffectivePriceDateTime>2018-04-01T00:00:00</prod:EffectivePriceDateTime>
+            <prod:PolicyStartDateTime>2018-04-01T00:00:00</prod:PolicyStartDateTime>
+            <prod:PolicyEndDateTime>2019-03-31T00:00:00</prod:PolicyEndDateTime>
+            <prod:OfferCodeDetailList>
+               <prod:OfferCodeDetail>
+                  <prod:OfferCode>A1209</prod:OfferCode>
+                  <prod:OfferCodeApplicationLevel>1</prod:OfferCodeApplicationLevel>
+               </prod:OfferCodeDetail>
+            </prod:OfferCodeDetailList>
+            <prod:SourceGroup>30</prod:SourceGroup>
+            <prod:SourceCode>INS02</prod:SourceCode>
+            <prod:Currency>GBP</prod:Currency>
+            <gen:ManConYear1>false</gen:ManConYear1>
+            <gen:Product>
+               <prod:ProductCode>PRD_UK_0001</prod:ProductCode>
+            </gen:Product>
+            <gen:Product>
+               <prod:ProductCode>PRD_UK_0003</prod:ProductCode>
+            </gen:Product>
+            <gen:Product>
+               <prod:ProductCode>PRD_UK_0004</prod:ProductCode>
+            </gen:Product>
+            <gen:Product>
+               <prod:ProductCode>PRD_UK_0005</prod:ProductCode>
+            </gen:Product>
+            <gen:CoveredPersons>2</gen:CoveredPersons>
+            <!---->
+         </gen:ProductList>
+         <gen:CustomerDetails>
+            <gen:Postcode>BA2 3RD</gen:Postcode>
+         </gen:CustomerDetails>
+      </gen:GenerateQuoteRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:jmsPropertyConfig/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="6f66b8b7-a80b-46ab-ac43-fc8559ed95c1" name="Positive Offer code" defaultOutgoingWss="" defaultIncomingWss="">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rh0124v:18026/SOAPServiceBinding/BSROS_GenerateQuote_NB/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB.2" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product.2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gen:GenerateQuoteRequest>
+         <mes:RequestHeader>
+            <mes:TransactionId>RO-NB-1611-313</mes:TransactionId>
+            <mes:Version>1.0</mes:Version>
+            <mes:RequestDateTime>2019-10-22T00:00:00</mes:RequestDateTime>
+            <mes:Source>
+               <mes:Domain>SALES</mes:Domain>
+               <mes:Channel>SanityTesting</mes:Channel>
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>
+               <mes:Name>Pricing Services</mes:Name>
+               <mes:User>PS Testing</mes:User>
+            </mes:Source>
+         </mes:RequestHeader>
+         <gen:ProductList>
+            <prod:EffectivePriceDateTime>2019-10-22T00:00:00</prod:EffectivePriceDateTime>
+            <prod:PolicyStartDateTime>2019-10-24T00:00:00</prod:PolicyStartDateTime>
+            <prod:PolicyEndDateTime>2019-10-24T00:00:00</prod:PolicyEndDateTime>
+            <prod:OfferCodeDetailList>
+               <prod:OfferCodeDetail>
+                  <prod:OfferCode>ONLINE</prod:OfferCode>
+                  <prod:OfferCodeApplicationLevel>1</prod:OfferCodeApplicationLevel>
+               </prod:OfferCodeDetail>
+            </prod:OfferCodeDetailList>
+            <prod:SourceGroup>30</prod:SourceGroup>
+            <prod:SourceCode>INS02</prod:SourceCode>
+            <prod:Currency>GBP</prod:Currency>
+            <gen:ManConYear1>false</gen:ManConYear1>
+            <gen:Product>
+               <prod:ProductCode>PRD_UK_0001</prod:ProductCode>
+            </gen:Product>
+
+            <gen:CoveredPersons>1</gen:CoveredPersons>
+         </gen:ProductList>
+         <gen:CustomerDetails>
+            <gen:Postcode>RG21 7UE</gen:Postcode>
+         </gen:CustomerDetails>
+      </gen:GenerateQuoteRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:jmsPropertyConfig/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="914b9eb8-0410-4a97-9a0c-31b930b8aeed" name="JZ1" defaultOutgoingWss="" defaultIncomingWss="">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://0.0.0.0:18047/SOAPServiceBinding/BSROS_GenerateQuote_RNL/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gen:GenerateQuoteRequest>
+         <mes:RequestHeader>
+            
+            <mes:TransactionId>RO-NB-1708-5640</mes:TransactionId>
+            <mes:Version>1.0</mes:Version>
+            <mes:RequestDateTime>2017-12-05T13:00:18</mes:RequestDateTime>
+            <mes:Source>
+               <mes:Domain>SALES</mes:Domain>
+               <mes:Channel>SanityTesting</mes:Channel>
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>
+               <mes:Name>Pricing Services</mes:Name>
+               <mes:User>PS Testing</mes:User>
+            </mes:Source>
+            
+         </mes:RequestHeader>
+         <gen:IndicativePriceFlag>true</gen:IndicativePriceFlag>
+         <gen:ProductList>
+            <prod:EffectivePriceDateTime>2017-12-05T13:00:18</prod:EffectivePriceDateTime>
+            <prod:PolicyStartDateTime>2017-12-05T01:00:00</prod:PolicyStartDateTime>
+            <prod:PolicyEndDateTime>2018-12-04T01:00:00</prod:PolicyEndDateTime>
+            <prod:OfferCodeDetailList>
+               <prod:OfferCodeDetail>
+                  <prod:OfferCode>ACFHS</prod:OfferCode><prod:OfferCodeCategory/>
+                  <prod:OfferCodeApplicationLevel>1</prod:OfferCodeApplicationLevel>
+               </prod:OfferCodeDetail>
+            </prod:OfferCodeDetailList>
+            <prod:SourceGroup>15</prod:SourceGroup>
+            <prod:SourceCode>SOM01</prod:SourceCode>
+            <prod:Currency>GBP</prod:Currency>
+            <gen:Product>
+               <prod:ProductCode>PRD_UK_0001</prod:ProductCode>
+            </gen:Product>
+            <gen:Product>
+               <prod:ProductCode>PRD_UK_0003</prod:ProductCode>
+            </gen:Product>
+            <gen:CoveredPersons>1</gen:CoveredPersons>
+            <prod:AgentDiscountRequestedList>
+               <prod:AgentDiscountRequested>
+                  <prod:AgentDiscountCode>CPM_C</prod:AgentDiscountCode>
+                  <prod:AgentDiscountType>T</prod:AgentDiscountType>
+                  <prod:AgentDiscountValue>3.33</prod:AgentDiscountValue>
+               </prod:AgentDiscountRequested>
+            </prod:AgentDiscountRequestedList>
+         </gen:ProductList>
+         <gen:CustomerDetails>
+            <gen:Postcode>RG21 7UF</gen:Postcode>
+         </gen:CustomerDetails>
+      </gen:GenerateQuoteRequest>
+   <gen1:GenerateQuoteRequest xmlns:gen1="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB.2"><mes:RequestHeader><mes:TransactionId/><mes:Version/><mes:RequestDateTime/><mes:Source><mes:Domain/><mes:Channel/><mes:LineOfBusiness/><mes:Name/></mes:Source></mes:RequestHeader><gen1:ProductList><prod1:EffectivePriceDateTime xmlns:prod1="http://www.theaa.com/CommonServices/Data/Product.2"/><prod1:PolicyStartDateTime xmlns:prod1="http://www.theaa.com/CommonServices/Data/Product.2"/><prod1:PolicyEndDateTime xmlns:prod1="http://www.theaa.com/CommonServices/Data/Product.2"/><prod1:SourceCode xmlns:prod1="http://www.theaa.com/CommonServices/Data/Product.2"/><prod1:Currency xmlns:prod1="http://www.theaa.com/CommonServices/Data/Product.2"/><gen1:CoveredPersons/></gen1:ProductList></gen1:GenerateQuoteRequest></soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="61ca34a0-92cb-45e6-ac8a-9593316ffabb" name="Request 3" defaultOutgoingWss="" defaultIncomingWss="">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://esbpreprod:18026/SOAPServiceBinding/BSROS_GenerateQuote_NB/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB.2" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product.2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gen:GenerateQuoteRequest>
+         <mes:RequestHeader>
+            <mes:TransactionId>RO-NB-1611-313</mes:TransactionId>
+            <mes:Version>1.0</mes:Version>
+            <mes:RequestDateTime>2020-07-10T00:00:01</mes:RequestDateTime>
+            <mes:Source>
+               <mes:Domain>SALES</mes:Domain>
+               <mes:Channel>SanityTesting</mes:Channel>
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>
+               <mes:Name>Pricing Services</mes:Name>
+               <mes:User>PS Testing</mes:User>
+            </mes:Source>
+         </mes:RequestHeader>
+         <gen:ProductList>
+            <prod:EffectivePriceDateTime>2020-07-10T00:00:01</prod:EffectivePriceDateTime>
+            <prod:PolicyStartDateTime>2020-07-10T00:00:01</prod:PolicyStartDateTime>
+            <prod:PolicyEndDateTime>2021-07-09T23:59:59</prod:PolicyEndDateTime>
+            <prod:OfferCodeDetailList>
+               <prod:OfferCodeDetail>
+                  <prod:OfferCode>ONLINE</prod:OfferCode>
+                  <prod:OfferCodeApplicationLevel>1</prod:OfferCodeApplicationLevel>
+               </prod:OfferCodeDetail>
+            </prod:OfferCodeDetailList>
+            <prod:SourceGroup>30</prod:SourceGroup>
+            <prod:SourceCode>INS02</prod:SourceCode>
+            <prod:Currency>GBP</prod:Currency>
+            <gen:ManConYear1>false</gen:ManConYear1>
+            <gen:Product><prod:ProductCode>PRD_UK_0001</prod:ProductCode></gen:Product>
+            
+          
+            <gen:CoveredPersons>0</gen:CoveredPersons>
+<!--            -->
+         </gen:ProductList>
+         <gen:CustomerDetails>
+            <gen:Postcode>BA2 3RD</gen:Postcode>
+         </gen:CustomerDetails>
+      </gen:GenerateQuoteRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="f08cd749-cb26-4853-b528-96e9af147981" name="Request 4" defaultOutgoingWss="" defaultIncomingWss="">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rh0123v:18126/SOAPServiceBinding/BSROS_GenerateQuote_NB/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product" xmlns:gen1="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_RNL">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gen1:GenerateQuoteRequest>
+         <mes:RequestHeader>
+            <com:CorrelationId>1</com:CorrelationId>
+            <mes:TransactionId>1</mes:TransactionId>
+            <mes:Version>1</mes:Version>
+            <mes:RequestDateTime>2017-06-08T00:00:00</mes:RequestDateTime>
+            <mes:Source>
+               <mes:Domain>SALES</mes:Domain>
+               <mes:Channel>Contact Centre</mes:Channel>
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>
+               <mes:Name>PEGA</mes:Name>
+               <mes:User>SRK</mes:User>
+            </mes:Source>
+         </mes:RequestHeader>
+         <gen1:PaymentType/>
+         <gen1:ProductList>
+            <prod:EffectivePriceDateTime>2017-06-08T00:00:00</prod:EffectivePriceDateTime>
+            <prod:PolicyStartDateTime>2017-06-08T00:00:00</prod:PolicyStartDateTime>
+            <prod:PolicyEndDateTime>2018-06-08T00:00:00</prod:PolicyEndDateTime>
+            <prod:SourceCode>INS04</prod:SourceCode>
+            <prod:Currency>GBP</prod:Currency>
+            <gen1:ManConYear1>false</gen1:ManConYear1>
+            <gen1:Product>
+               <prod:ProductCode>PRD_UK_0001</prod:ProductCode>
+            </gen1:Product>
+            <gen1:CoveredPersons>1</gen1:CoveredPersons>
+            <prod:AgentDiscountRequestedList>
+               <prod:AgentDiscountRequested>
+                  <prod:AgentDiscountCode>Abc1c</prod:AgentDiscountCode>
+                  <prod:AgentDiscountType>M</prod:AgentDiscountType>
+                  <prod:AgentDiscountValue>10</prod:AgentDiscountValue>
+               </prod:AgentDiscountRequested>
+               <prod:AgentDiscountRequested>
+                  <prod:AgentDiscountCode>Abc2c</prod:AgentDiscountCode>
+                  <prod:AgentDiscountType>M</prod:AgentDiscountType>
+                  <prod:AgentDiscountValue>10</prod:AgentDiscountValue>
+               </prod:AgentDiscountRequested>
+               <prod:AgentDiscountRequested>
+                  <prod:AgentDiscountCode>Abc3c</prod:AgentDiscountCode>
+                  <prod:AgentDiscountType>M</prod:AgentDiscountType>
+                  <prod:AgentDiscountValue>10</prod:AgentDiscountValue>
+               </prod:AgentDiscountRequested>
+               <prod:AgentDiscountRequested>
+                  <prod:AgentDiscountCode>Abc4c</prod:AgentDiscountCode>
+                  <prod:AgentDiscountType>M</prod:AgentDiscountType>
+                  <prod:AgentDiscountValue>5</prod:AgentDiscountValue>
+               </prod:AgentDiscountRequested>
+               <prod:AgentDiscountRequested>
+                  <prod:AgentDiscountCode>Abc5c</prod:AgentDiscountCode>
+                  <prod:AgentDiscountType>M</prod:AgentDiscountType>
+                  <prod:AgentDiscountValue>1</prod:AgentDiscountValue>
+               </prod:AgentDiscountRequested>
+            </prod:AgentDiscountRequestedList>
+            <prod:OfferCode>IAF01</prod:OfferCode>
+            <gen:Tenure>1</gen:Tenure>
+         </gen1:ProductList>
+         <gen1:CustomerDetails>
+            <!--Optional:-->
+            <gen1:Postcode>BA2 3RD</gen1:Postcode>
+            <mem:MembershipNumber xmlns:mem="http://www.theaa.com/CommonServices/Data/Membership.2"/>
+         </gen1:CustomerDetails>
+         <gen1:CurrentFlexDetails>
+            <prod:FlexFactorOnCurrentPolicy/>
+         </gen1:CurrentFlexDetails>
+      </gen1:GenerateQuoteRequest>
+      <gen:GenerateQuoteRequest>
+         <mes:RequestHeader>
+            <mes:TransactionId/>
+            <mes:Version/>
+            <mes:RequestDateTime/>
+            <mes:Source>
+               <mes:Domain/>
+               <mes:Channel/>
+               <mes:LineOfBusiness/>
+               <mes:Name/>
+            </mes:Source>
+         </mes:RequestHeader>
+         <gen:ProductList>
+            <prod:EffectivePriceDateTime/>
+            <prod:PolicyStartDateTime/>
+            <prod:PolicyEndDateTime/>
+            <prod:SourceCode/>
+            <prod:Currency/>
+            <gen:CoveredPersons/>
+         </gen:ProductList>
+      </gen:GenerateQuoteRequest>
+      <gen2:GenerateQuoteRequest xmlns:gen2="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB.2"/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="c9b9ce52-bb7a-42a3-8d1c-7282849952f8" name="Request 5" defaultOutgoingWss="" defaultIncomingWss="">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://0.0.0.0:18047/SOAPServiceBinding/BSROS_GenerateQuote_RNL/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product" xmlns:gen1="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_RNL">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gen1:GenerateQuoteRequest>
+         <mes:RequestHeader>
+            <!--Optional:-->
+            <com:CorrelationId>?</com:CorrelationId>
+            <mes:TransactionId>?</mes:TransactionId>
+            <mes:Version>?</mes:Version>
+            <mes:RequestDateTime>?</mes:RequestDateTime>
+            <mes:Source>
+               <mes:Domain>?</mes:Domain>
+               <mes:Channel>?</mes:Channel>
+               <mes:LineOfBusiness>?</mes:LineOfBusiness>
+               <mes:Name>?</mes:Name>
+               <!--Optional:-->
+               <mes:Address>?</mes:Address>
+               <!--Optional:-->
+               <mes:InstanceId>?</mes:InstanceId>
+               <!--Optional:-->
+               <mes:ApplicationVersion>?</mes:ApplicationVersion>
+               <!--Optional:-->
+               <mes:User>?</mes:User>
+            </mes:Source>
+            <!--Optional:-->
+            <mes:MIContext>?</mes:MIContext>
+         </mes:RequestHeader>
+         <gen1:PaymentType/><gen1:ProductList>
+            <prod:EffectivePriceDateTime>?</prod:EffectivePriceDateTime>
+            <prod:PolicyStartDateTime>?</prod:PolicyStartDateTime>
+            <prod:PolicyEndDateTime>?</prod:PolicyEndDateTime>
+            <!--Optional:-->
+            <prod:SourceGroup>?</prod:SourceGroup>
+            <prod:SourceCode>?</prod:SourceCode>
+            <prod:Currency>?</prod:Currency>
+            <!--Optional:-->
+            <gen1:ManConYear1>?</gen1:ManConYear1>
+            <!--1 or more repetitions:-->
+            <gen1:Product>
+               <prod:ProductCode>?</prod:ProductCode>
+               <!--Optional:-->
+               <prod:CoverageList>
+                  <!--1 or more repetitions:-->
+                  <prod:Coverage>
+                     <prod:CoverageCode>?</prod:CoverageCode>
+                     <!--Optional:-->
+                     <prod:LimitList>
+                        <!--1 or more repetitions:-->
+                        <prod:Limit>
+                           <prod:Type>?</prod:Type>
+                           <prod:Value>?</prod:Value>
+                        </prod:Limit>
+                     </prod:LimitList>
+                     <!--Optional:-->
+                     <prod:AdditionalData>
+                        <prod:Type>?</prod:Type>
+                        <prod:Value>?</prod:Value>
+                     </prod:AdditionalData>
+                  </prod:Coverage>
+               </prod:CoverageList>
+            </gen1:Product>
+            <!--Optional:-->
+            <gen1:VehicleAgeList>
+               <!--1 or more repetitions:-->
+               <gen1:VehicleAge>?</gen1:VehicleAge>
+            </gen1:VehicleAgeList>
+            <gen1:CoveredPersons>?</gen1:CoveredPersons>
+            <!--Optional:-->
+            <prod:RequestSurchargeAndFeeList>
+               <!--1 or more repetitions:-->
+               <prod:SurchargeOrFee>
+                  <prod:SurchargeRequestType>?</prod:SurchargeRequestType>
+                  <prod:IsWaived>?</prod:IsWaived>
+                  <prod:WaivedReason>?</prod:WaivedReason>
+                  <prod:SurchargeOrFeeCode>?</prod:SurchargeOrFeeCode>
+               </prod:SurchargeOrFee>
+            </prod:RequestSurchargeAndFeeList>
+            <!--Optional:-->
+            <prod:AgentDiscountRequestedList>
+               <!--1 or more repetitions:-->
+               <prod:AgentDiscountRequested>
+                  <prod:AgentDiscountCode>?</prod:AgentDiscountCode>
+                  <prod:AgentDiscountType>?</prod:AgentDiscountType>
+                  <prod:AgentDiscountValue>?</prod:AgentDiscountValue>
+               </prod:AgentDiscountRequested>
+            </prod:AgentDiscountRequestedList>
+            <!--Optional:-->
+            <prod:OfferCode>?</prod:OfferCode>
+            <!--Optional:-->
+            <gen:Tenure>?</gen:Tenure>
+         </gen1:ProductList>
+         <!--Optional:-->
+         <gen1:CustomerDetails>
+            <!--Optional:-->
+            <gen1:Postcode>?</gen1:Postcode><mem:MembershipNumber xmlns:mem="http://www.theaa.com/CommonServices/Data/Membership.2"/>
+         </gen1:CustomerDetails>
+      <gen1:CurrentFlexDetails><prod:FlexFactorOnCurrentPolicy/></gen1:CurrentFlexDetails></gen1:GenerateQuoteRequest>
+   <gen:GenerateQuoteRequest/><gen2:GenerateQuoteRequest xmlns:gen2="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB.2"/></soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="27bd4862-4f70-4b63-ad9f-b2b530fe3035" name="Request 9" defaultOutgoingWss="" defaultIncomingWss="">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rh0123v:18126/SOAPServiceBinding/BSROS_GenerateQuote_NB/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB.2" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product.2">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <gen:GenerateQuoteRequest>\r
+         <mes:RequestHeader>\r
+            <mes:TransactionId>RO-NB-1611-313</mes:TransactionId>\r
+            <mes:Version>1.0</mes:Version>\r
+            <mes:RequestDateTime>2018-03-28T00:00:00</mes:RequestDateTime>\r
+            <mes:Source>\r
+               <mes:Domain>SALES</mes:Domain>\r
+               <mes:Channel>SanityTesting</mes:Channel>\r
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>\r
+               <mes:Name>Pricing Services</mes:Name>\r
+               <mes:User>PS Testing</mes:User>\r
+            </mes:Source>\r
+         </mes:RequestHeader>\r
+         <gen:ProductList>\r
+            <prod:EffectivePriceDateTime>2018-03-28T00:00:00</prod:EffectivePriceDateTime>\r
+            <prod:PolicyStartDateTime>2018-03-28T00:00:00</prod:PolicyStartDateTime>\r
+            <prod:PolicyEndDateTime>2019-03-27T00:00:00</prod:PolicyEndDateTime>\r
+            <prod:OfferCodeDetailList>\r
+               <prod:OfferCodeDetail>\r
+                  <prod:OfferCode>ONLINE</prod:OfferCode>\r
+                  <prod:OfferCodeApplicationLevel>1</prod:OfferCodeApplicationLevel>\r
+               </prod:OfferCodeDetail>\r
+            </prod:OfferCodeDetailList>\r
+            <prod:SourceGroup>30</prod:SourceGroup>\r
+            <prod:SourceCode>INS02</prod:SourceCode>\r
+            <prod:Currency>GBP</prod:Currency>\r
+            <gen:Product>\r
+               <prod:ProductCode>PRD_UK_0001</prod:ProductCode>\r
+            </gen:Product>\r
+            <gen:Product>\r
+               <prod:ProductCode>PRD_UK_0003</prod:ProductCode>\r
+            </gen:Product>\r
+            <gen:Product>\r
+               <prod:ProductCode>PRD_UK_0005</prod:ProductCode>\r
+            </gen:Product>\r
+            <gen:Product>\r
+               <prod:ProductCode>PRD_UK_0009</prod:ProductCode>\r
+            </gen:Product>\r
+            <gen:VehicleAgeList>\r
+               <gen:VehicleAge>19</gen:VehicleAge>\r
+               <gen:VehicleAge>17</gen:VehicleAge>\r
+               <gen:VehicleAge>19</gen:VehicleAge>\r
+               <gen:VehicleAge>16</gen:VehicleAge>\r
+            </gen:VehicleAgeList>\r
+            <gen:CoveredPersons>1</gen:CoveredPersons>\r
+            <prod:AgentDiscountRequestedList>\r
+               <prod:AgentDiscountRequested>\r
+                  <prod:AgentDiscountCode>Abc1c</prod:AgentDiscountCode>\r
+                  <prod:AgentDiscountType>P</prod:AgentDiscountType>\r
+                  <prod:AgentDiscountValue>100</prod:AgentDiscountValue>\r
+               </prod:AgentDiscountRequested>\r
+            </prod:AgentDiscountRequestedList>\r
+         </gen:ProductList>\r
+         <gen:CustomerDetails>\r
+            <gen:Postcode>BA2 3RD</gen:Postcode>\r
+         </gen:CustomerDetails>\r
+      </gen:GenerateQuoteRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="859cfb82-cd98-4f54-a47a-c715f6a28028" name="Request 9" defaultOutgoingWss="" defaultIncomingWss="">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://esbpreprod:18047/SOAPServiceBinding/BSROS_GenerateQuote_RNL/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product" xmlns:gen1="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_RNL">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gen:GenerateQuoteRequest>
+         <mes:RequestHeader>
+            <com:CorrelationId>1</com:CorrelationId>
+            <mes:TransactionId>1</mes:TransactionId>
+            <mes:Version>1</mes:Version>
+            <mes:RequestDateTime>2017-09-06T00:00:00</mes:RequestDateTime>
+            <mes:Source>
+               <mes:Domain>SALES</mes:Domain>
+               <mes:Channel>Contact Centre</mes:Channel>
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>
+               <mes:Name>PEGA</mes:Name>
+               <mes:User>SRK</mes:User>
+            </mes:Source>
+         </mes:RequestHeader>
+         <gen:ProductList>
+            <prod:EffectivePriceDateTime>2017-09-06T00:00:00</prod:EffectivePriceDateTime>
+            <prod:PolicyStartDateTime>2017-09-06T00:00:00</prod:PolicyStartDateTime>
+            <prod:PolicyEndDateTime>2018-09-05T00:00:00</prod:PolicyEndDateTime>
+            <prod:SourceCode>INS04</prod:SourceCode>
+            <prod:Currency>GBP</prod:Currency>
+            <gen:ManConYear1>false</gen:ManConYear1>
+            <gen:Product>
+               <prod:ProductCode>PRD_UK_0001</prod:ProductCode>
+            </gen:Product>
+            <gen:CoveredPersons>1</gen:CoveredPersons>
+            <prod:AgentDiscountRequestedList>
+               <prod:AgentDiscountRequested>
+                  <prod:AgentDiscountCode>Abc1c</prod:AgentDiscountCode>
+                  <prod:AgentDiscountType>M</prod:AgentDiscountType>
+                  <prod:AgentDiscountValue>10</prod:AgentDiscountValue>
+               </prod:AgentDiscountRequested>
+               <prod:AgentDiscountRequested>
+                  <prod:AgentDiscountCode>Abc2c</prod:AgentDiscountCode>
+                  <prod:AgentDiscountType>M</prod:AgentDiscountType>
+                  <prod:AgentDiscountValue>1</prod:AgentDiscountValue>
+               </prod:AgentDiscountRequested>
+            </prod:AgentDiscountRequestedList>
+         </gen:ProductList>
+         <gen:CustomerDetails>
+            <!--Optional:-->
+            <gen:Postcode>BA2 3RD</gen:Postcode>
+            <mem:MembershipNumber xmlns:mem="http://www.theaa.com/CommonServices/Data/Membership.2"/>
+         </gen:CustomerDetails>
+         <gen1:PaymentType>SAP</gen1:PaymentType>
+         <gen1:CurrentFlexDetails>
+            <prod:FlexFactorOnCurrentPolicy>1</prod:FlexFactorOnCurrentPolicy>
+         </gen1:CurrentFlexDetails>
+      </gen:GenerateQuoteRequest>
+   <gen2:GenerateQuoteRequest xmlns:gen2="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB.2"/></soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="2050ef0a-e134-4ac7-b9b3-71636f610851" name="id 73" defaultOutgoingWss="" defaultIncomingWss="">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rh0123v:18126/SOAPServiceBinding/BSROS_GenerateQuote_NB/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product" xmlns:gen1="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB.2" xmlns:prod1="http://www.theaa.com/CommonServices/Data/Product.2">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <gen1:GenerateQuoteRequest>\r
+         <mes:RequestHeader>\r
+            <com:CorrelationId>1</com:CorrelationId>\r
+            <mes:TransactionId>1</mes:TransactionId>\r
+            <mes:Version>1</mes:Version>\r
+            <mes:RequestDateTime>2017-12-05T00:00:00</mes:RequestDateTime>\r
+            <mes:Source>\r
+               <mes:Domain>SALES</mes:Domain>\r
+               <mes:Channel>Contact Centre</mes:Channel>\r
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>\r
+               <mes:Name>PEGA</mes:Name>\r
+               <mes:User>SRK</mes:User>\r
+            </mes:Source>\r
+         </mes:RequestHeader>\r
+         <gen1:ProductList>\r
+            <prod1:EffectivePriceDateTime>2017-12-05T00:00:00</prod1:EffectivePriceDateTime>\r
+            <prod1:PolicyStartDateTime>2017-12-05T00:00:00</prod1:PolicyStartDateTime>\r
+            <prod1:PolicyEndDateTime>2018-12-04T00:00:00</prod1:PolicyEndDateTime>\r
+            <prod1:SourceCode>INS04</prod1:SourceCode>\r
+            <prod1:Currency>GBP</prod1:Currency>\r
+            <!--gen:MembershipTenure>1</gen:MembershipTenure-->\r
+            <gen1:ManConYear1>false</gen1:ManConYear1>\r
+            <gen1:Product>\r
+               <prod1:ProductCode>PRD_UK_0001</prod1:ProductCode>\r
+            </gen1:Product>\r
+            <gen1:Product>\r
+               <prod1:ProductCode>PRD_UK_0003</prod1:ProductCode>\r
+            </gen1:Product>\r
+            <gen1:CoveredPersons>1</gen1:CoveredPersons>\r
+            <prod1:AgentDiscountRequestedList>\r
+               <prod1:AgentDiscountRequested>\r
+                  <prod1:AgentDiscountCode>Abc1c</prod1:AgentDiscountCode>\r
+                  <prod1:AgentDiscountType>T</prod1:AgentDiscountType>\r
+                  <prod1:AgentDiscountValue>3.33</prod1:AgentDiscountValue>\r
+               </prod1:AgentDiscountRequested>\r
+            </prod1:AgentDiscountRequestedList>\r
+            <prod:OfferCode>ACFHS</prod:OfferCode>\r
+         </gen1:ProductList>\r
+         <gen1:CustomerDetails>\r
+            <!--Optional:-->\r
+            <gen1:Postcode>BA2 3RD</gen1:Postcode>\r
+         </gen1:CustomerDetails>\r
+         <!--prod:OfferCode>ACFHS</prod:OfferCode-->\r
+      </gen1:GenerateQuoteRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="c3661e51-a773-4573-896d-d0bf8161cfc7" name="id 74" defaultOutgoingWss="" defaultIncomingWss="">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rh0123v:18026/SOAPServiceBinding/BSROS_GenerateQuote_NB/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product" xmlns:gen1="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB.2" xmlns:prod1="http://www.theaa.com/CommonServices/Data/Product.2">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <gen1:GenerateQuoteRequest>\r
+         <mes:RequestHeader>\r
+            <com:CorrelationId>1</com:CorrelationId>\r
+            <mes:TransactionId>1</mes:TransactionId>\r
+            <mes:Version>1</mes:Version>\r
+            <mes:RequestDateTime>2017-12-05T00:00:00</mes:RequestDateTime>\r
+            <mes:Source>\r
+               <mes:Domain>SALES</mes:Domain>\r
+               <mes:Channel>Contact Centre</mes:Channel>\r
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>\r
+               <mes:Name>PEGA</mes:Name>\r
+               <mes:User>SRK</mes:User>\r
+            </mes:Source>\r
+         </mes:RequestHeader>\r
+         <gen1:ProductList>\r
+            <prod1:EffectivePriceDateTime>2017-12-05T00:00:00</prod1:EffectivePriceDateTime>\r
+            <prod1:PolicyStartDateTime>2017-12-05T00:00:00</prod1:PolicyStartDateTime>\r
+            <prod1:PolicyEndDateTime>2018-12-04T00:00:00</prod1:PolicyEndDateTime>\r
+            <prod1:SourceGroup>27</prod1:SourceGroup>\r
+            <prod1:SourceCode>INS04</prod1:SourceCode>\r
+            <prod1:Currency>GBP</prod1:Currency>\r
+            <!--gen:MembershipTenure>1</gen:MembershipTenure>
+            <gen:ManConYear1>true</gen:ManConYear1-->\r
+            <gen1:Product>\r
+               <prod1:ProductCode>PRD_UK_0001</prod1:ProductCode>\r
+            </gen1:Product>\r
+            <gen1:CoveredPersons>1</gen1:CoveredPersons>\r
+         </gen1:ProductList>\r
+         <gen1:CustomerDetails>\r
+            <!--Optional:-->\r
+            <gen1:Postcode>BA2 3RD</gen1:Postcode>\r
+            <!--mem:MembershipNumber xmlns:mem="http://www.theaa.com/CommonServices/Data/Membership.2"/-->\r
+         </gen1:CustomerDetails>\r
+         <!--prod:OfferCode></prod:OfferCode-->\r
+      </gen1:GenerateQuoteRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:jmsPropertyConfig/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="6ab0caae-4ed7-4bcc-baf2-081c88dff331" name="Request 17">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rh0124v:18026/SOAPServiceBinding/BSROS_GenerateQuote_NB/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product" xmlns:gen1="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB.2" xmlns:prod1="http://www.theaa.com/CommonServices/Data/Product.2">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <gen1:GenerateQuoteRequest>\r
+         <mes:RequestHeader>\r
+            <com:CorrelationId>1</com:CorrelationId>\r
+            <mes:TransactionId>1</mes:TransactionId>\r
+            <mes:Version>1</mes:Version>\r
+            <mes:RequestDateTime>2017-12-05T00:00:00</mes:RequestDateTime>\r
+            <mes:Source>\r
+               <mes:Domain>SALES</mes:Domain>\r
+               <mes:Channel>Contact Centre</mes:Channel>\r
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>\r
+               <mes:Name>PEGA</mes:Name>\r
+               <mes:User>SRK</mes:User>\r
+            </mes:Source>\r
+         </mes:RequestHeader>\r
+         <gen1:ProductList>\r
+            <prod1:EffectivePriceDateTime>2017-12-05T00:00:00</prod1:EffectivePriceDateTime>\r
+            <prod1:PolicyStartDateTime>2017-12-05T00:00:00</prod1:PolicyStartDateTime>\r
+            <prod1:PolicyEndDateTime>2018-12-04T00:00:00</prod1:PolicyEndDateTime>\r
+            <prod1:SourceCode>INS04</prod1:SourceCode>\r
+            <prod1:Currency>GBP</prod1:Currency>\r
+            <!--gen:MembershipTenure>1</gen:MembershipTenure-->\r
+            <gen1:ManConYear1>false</gen1:ManConYear1>\r
+            <gen1:Product>\r
+               <prod1:ProductCode>PRD_UK_0001</prod1:ProductCode>\r
+            </gen1:Product>\r
+            <gen1:CoveredPersons>1</gen1:CoveredPersons>\r
+            <prod1:AgentDiscountRequestedList>\r
+               <prod1:AgentDiscountRequested>\r
+                  <prod1:AgentDiscountCode>Abc1c</prod1:AgentDiscountCode>\r
+                  <prod1:AgentDiscountType>M</prod1:AgentDiscountType>\r
+                  <prod1:AgentDiscountValue>0.83</prod1:AgentDiscountValue>\r
+               </prod1:AgentDiscountRequested>\r
+               <prod1:AgentDiscountRequested>\r
+                  <prod1:AgentDiscountCode>Abc2c</prod1:AgentDiscountCode>\r
+                  <prod1:AgentDiscountType>M</prod1:AgentDiscountType>\r
+                  <prod1:AgentDiscountValue>0.42</prod1:AgentDiscountValue>\r
+               </prod1:AgentDiscountRequested>\r
+               <prod1:AgentDiscountRequested>\r
+                  <prod1:AgentDiscountCode>Abc3c</prod1:AgentDiscountCode>\r
+                  <prod1:AgentDiscountType>M</prod1:AgentDiscountType>\r
+                  <prod1:AgentDiscountValue>0.42</prod1:AgentDiscountValue>\r
+               </prod1:AgentDiscountRequested>\r
+               <prod1:AgentDiscountRequested>\r
+                  <prod1:AgentDiscountCode>Abc4c</prod1:AgentDiscountCode>\r
+                  <prod1:AgentDiscountType>M</prod1:AgentDiscountType>\r
+                  <prod1:AgentDiscountValue>0.42</prod1:AgentDiscountValue>\r
+               </prod1:AgentDiscountRequested>\r
+            </prod1:AgentDiscountRequestedList>\r
+            <prod:OfferCode/>\r
+         </gen1:ProductList>\r
+         <gen1:CustomerDetails>\r
+            <!--Optional:-->\r
+            <gen1:Postcode>BA2 3RD</gen1:Postcode>\r
+         </gen1:CustomerDetails>\r
+         <!--prod:OfferCode></prod:OfferCode-->\r
+      </gen1:GenerateQuoteRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:jmsPropertyConfig/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="2fd4db65-d3fc-40e7-a38e-a9d661a5fba4" name="Request 19">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rh0123v:18026/SOAPServiceBinding/BSROS_GenerateQuote_NB/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product" xmlns:gen1="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB.2" xmlns:prod1="http://www.theaa.com/CommonServices/Data/Product.2">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <gen1:GenerateQuoteRequest>\r
+         <mes:RequestHeader>\r
+            <com:CorrelationId>1</com:CorrelationId>\r
+            <mes:TransactionId>1</mes:TransactionId>\r
+            <mes:Version>1</mes:Version>\r
+            <mes:RequestDateTime>2018-02-14T00:00:00</mes:RequestDateTime>\r
+            <mes:Source>\r
+               <mes:Domain>SALES</mes:Domain>\r
+               <mes:Channel>Contact Centre</mes:Channel>\r
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>\r
+               <mes:Name>PEGA</mes:Name>\r
+               <mes:User>SRK</mes:User>\r
+            </mes:Source>\r
+         </mes:RequestHeader>\r
+         <gen1:ProductList>\r
+            <prod1:EffectivePriceDateTime>2018-02-14T00:00:00</prod1:EffectivePriceDateTime>\r
+            <prod1:PolicyStartDateTime>2018-02-14T00:00:00</prod1:PolicyStartDateTime>\r
+            <prod1:PolicyEndDateTime>2019-02-13T00:00:00</prod1:PolicyEndDateTime>\r
+            <prod1:SourceCode>INS04</prod1:SourceCode>\r
+            <prod1:Currency>GBP</prod1:Currency>\r
+            <gen1:ManConYear1>false</gen1:ManConYear1>\r
+            <gen1:Product>\r
+               <prod1:ProductCode>PRD_UK_0020</prod1:ProductCode>\r
+            </gen1:Product>\r
+            <gen1:CoveredPersons>0</gen1:CoveredPersons>\r
+            <prod:OfferCode>ONLINE</prod:OfferCode>\r
+         </gen1:ProductList>\r
+         <gen1:CustomerDetails>\r
+            <gen1:Postcode>BA2 3RD</gen1:Postcode>\r
+         </gen1:CustomerDetails>\r
+      </gen1:GenerateQuoteRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:jmsPropertyConfig/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="f6bc0601-743c-40fa-93f2-794f0e61d709" name="Request 20">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rh0123v:18026/SOAPServiceBinding/BSROS_GenerateQuote_NB/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product" xmlns:gen1="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB.2" xmlns:prod1="http://www.theaa.com/CommonServices/Data/Product.2">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <gen1:GenerateQuoteRequest>\r
+         <mes:RequestHeader>\r
+            <com:CorrelationId>1</com:CorrelationId>\r
+            <mes:TransactionId>1</mes:TransactionId>\r
+            <mes:Version>1</mes:Version>\r
+            <mes:RequestDateTime>2018-03-28T00:00:00</mes:RequestDateTime>\r
+            <mes:Source>\r
+               <mes:Domain>SALES</mes:Domain>\r
+               <mes:Channel>Contact Centre</mes:Channel>\r
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>\r
+               <mes:Name>PEGA</mes:Name>\r
+               <mes:User>SRK</mes:User>\r
+            </mes:Source>\r
+         </mes:RequestHeader>\r
+         <gen1:ProductList>\r
+            <prod1:EffectivePriceDateTime>2018-03-28T00:00:00</prod1:EffectivePriceDateTime>\r
+            <prod1:PolicyStartDateTime>2018-03-28T00:00:00</prod1:PolicyStartDateTime>\r
+            <prod1:PolicyEndDateTime>2019-03-27T00:00:00</prod1:PolicyEndDateTime>\r
+            <prod1:SourceCode>INS04</prod1:SourceCode>\r
+            <prod1:Currency>GBP</prod1:Currency>\r
+            <gen1:ManConYear1>false</gen1:ManConYear1>\r
+            <gen1:Product>\r
+               <prod1:ProductCode>PRD_UK_0022</prod1:ProductCode>\r
+            </gen1:Product>\r
+            <gen1:Product>\r
+               <prod1:ProductCode>PRD_UK_0005</prod1:ProductCode>\r
+            </gen1:Product>\r
+            <gen1:CoveredPersons>0</gen1:CoveredPersons>\r
+            <prod:OfferCode>MCC60</prod:OfferCode>\r
+         </gen1:ProductList>\r
+         <gen1:CustomerDetails>\r
+            <!--Optional:-->\r
+            <gen1:Postcode>BA2 3RD</gen1:Postcode>\r
+         </gen1:CustomerDetails>\r
+      </gen1:GenerateQuoteRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:jmsPropertyConfig/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="381663b2-ee98-4801-b56a-eced7ca0fa42" name="Request 21">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rh0123v:18026/SOAPServiceBinding/BSROS_GenerateQuote_NB/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product" xmlns:gen1="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB.2" xmlns:prod1="http://www.theaa.com/CommonServices/Data/Product.2">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <gen1:GenerateQuoteRequest>\r
+         <mes:RequestHeader>\r
+            <com:CorrelationId>1</com:CorrelationId>\r
+            <mes:TransactionId>1</mes:TransactionId>\r
+            <mes:Version>1</mes:Version>\r
+            <mes:RequestDateTime>2018-03-05T00:00:00</mes:RequestDateTime>\r
+            <mes:Source>\r
+               <mes:Domain>SALES</mes:Domain>\r
+               <mes:Channel>Contact Centre</mes:Channel>\r
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>\r
+               <mes:Name>PEGA</mes:Name>\r
+               <mes:User>SRK</mes:User>\r
+            </mes:Source>\r
+         </mes:RequestHeader>\r
+         <gen1:ProductList>\r
+            <prod1:EffectivePriceDateTime>2018-03-05T00:00:00</prod1:EffectivePriceDateTime>\r
+            <prod1:PolicyStartDateTime>2018-03-05T00:00:00</prod1:PolicyStartDateTime>\r
+            <prod1:PolicyEndDateTime>2019-03-04T00:00:00</prod1:PolicyEndDateTime>\r
+            <!--prod:OfferCode>ONLINE</prod:OfferCode-->\r
+            <prod1:SourceCode>INS04</prod1:SourceCode>\r
+            <prod1:Currency>GBP</prod1:Currency>\r
+            <gen1:ManConYear1>false</gen1:ManConYear1>\r
+            <gen1:Product>\r
+               <prod1:ProductCode>PRD_UK_0020</prod1:ProductCode>\r
+            </gen1:Product>\r
+            <gen1:CoveredPersons>0</gen1:CoveredPersons>\r
+         </gen1:ProductList>\r
+         <gen1:CustomerDetails>\r
+            <!--Optional:-->\r
+            <gen1:Postcode>BA2 3RD</gen1:Postcode>\r
+         </gen1:CustomerDetails>\r
+      </gen1:GenerateQuoteRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:jmsPropertyConfig/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="5739d917-9281-4c68-88d1-9df34d7ab55d" name="Request 24">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://0.0.0.0:18026/SOAPServiceBinding/BSROS_GenerateQuote_NB/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product" xmlns:gen1="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB.2" xmlns:prod1="http://www.theaa.com/CommonServices/Data/Product.2">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <gen1:GenerateQuoteRequest>\r
+         <mes:RequestHeader>\r
+            <!--Optional:-->\r
+            <com:CorrelationId>?</com:CorrelationId>\r
+            <mes:TransactionId>?</mes:TransactionId>\r
+            <mes:Version>?</mes:Version>\r
+            <mes:RequestDateTime>?</mes:RequestDateTime>\r
+            <mes:Source>\r
+               <mes:Domain>?</mes:Domain>\r
+               <mes:Channel>?</mes:Channel>\r
+               <mes:LineOfBusiness>?</mes:LineOfBusiness>\r
+               <mes:Name>?</mes:Name>\r
+               <!--Optional:-->\r
+               <mes:Address>?</mes:Address>\r
+               <!--Optional:-->\r
+               <mes:InstanceId>?</mes:InstanceId>\r
+               <!--Optional:-->\r
+               <mes:ApplicationVersion>?</mes:ApplicationVersion>\r
+               <!--Optional:-->\r
+               <mes:User>?</mes:User>\r
+            </mes:Source>\r
+            <!--Optional:-->\r
+            <mes:MIContext>?</mes:MIContext>\r
+         </mes:RequestHeader>\r
+         <gen1:ProductList>\r
+            <prod1:EffectivePriceDateTime>?</prod1:EffectivePriceDateTime>\r
+            <prod1:PolicyStartDateTime>?</prod1:PolicyStartDateTime>\r
+            <prod1:PolicyEndDateTime>?</prod1:PolicyEndDateTime>\r
+            <!--Optional:-->\r
+            <prod1:OfferCodeDetailList>\r
+               <!--1 or more repetitions:-->\r
+               <prod1:OfferCodeDetail>\r
+                  <prod1:OfferCode>?</prod1:OfferCode>\r
+                  <prod:OfferCodeCategory>?</prod:OfferCodeCategory>\r
+               </prod1:OfferCodeDetail>\r
+            </prod1:OfferCodeDetailList>\r
+            <!--Optional:-->\r
+            <prod1:SourceGroup>?</prod1:SourceGroup>\r
+            <prod1:SourceCode>?</prod1:SourceCode>\r
+            <prod1:Currency>?</prod1:Currency>\r
+            <!--Optional:-->\r
+            <gen1:Tenure>?</gen1:Tenure>\r
+            <!--Optional:-->\r
+            <gen1:ManConYear1>?</gen1:ManConYear1>\r
+            <!--1 or more repetitions:-->\r
+            <gen1:Product>\r
+               <prod1:ProductCode>?</prod1:ProductCode>\r
+               <!--Optional:-->\r
+               <prod1:CoverageList>\r
+                  <!--1 or more repetitions:-->\r
+                  <prod1:Coverage>\r
+                     <prod1:CoverageCode>?</prod1:CoverageCode>\r
+                     <!--Optional:-->\r
+                     <prod1:LimitList>\r
+                        <!--1 or more repetitions:-->\r
+                        <prod1:Limit>\r
+                           <prod1:Type>?</prod1:Type>\r
+                           <prod1:Value>?</prod1:Value>\r
+                        </prod1:Limit>\r
+                     </prod1:LimitList>\r
+                     <!--Optional:-->\r
+                     <prod1:AdditionalData>\r
+                        <prod1:Type>?</prod1:Type>\r
+                        <prod1:Value>?</prod1:Value>\r
+                     </prod1:AdditionalData>\r
+                  </prod1:Coverage>\r
+               </prod1:CoverageList>\r
+            </gen1:Product>\r
+            <!--Optional:-->\r
+            <gen1:VehicleAgeList>\r
+               <!--1 or more repetitions:-->\r
+               <gen1:VehicleAge>?</gen1:VehicleAge>\r
+            </gen1:VehicleAgeList>\r
+            <!--Optional:-->\r
+            <prod1:RequestSurchargeAndFeeList>\r
+               <!--1 or more repetitions:-->\r
+               <prod1:SurchargeOrFee>\r
+                  <prod1:SurchargeRequestType>?</prod1:SurchargeRequestType>\r
+                  <prod1:IsWaived>?</prod1:IsWaived>\r
+                  <prod1:WaivedReason>?</prod1:WaivedReason>\r
+                  <prod1:SurchargeOrFeeCode>?</prod1:SurchargeOrFeeCode>\r
+               </prod1:SurchargeOrFee>\r
+            </prod1:RequestSurchargeAndFeeList>\r
+            <gen1:CoveredPersons>?</gen1:CoveredPersons>\r
+            <!--Optional:-->\r
+            <prod1:AgentDiscountRequestedList>\r
+               <!--1 or more repetitions:-->\r
+               <prod1:AgentDiscountRequested>\r
+                  <prod1:AgentDiscountCode>?</prod1:AgentDiscountCode>\r
+                  <prod1:AgentDiscountType>?</prod1:AgentDiscountType>\r
+                  <prod1:AgentDiscountValue>?</prod1:AgentDiscountValue>\r
+               </prod1:AgentDiscountRequested>\r
+            </prod1:AgentDiscountRequestedList>\r
+            <!--You have a CHOICE of the next 2 items at this level-->\r
+            <!--Optional:-->\r
+            <prod:OfferCode>?</prod:OfferCode>\r
+            <!--Optional:-->\r
+            <prod:FlexFactor>?</prod:FlexFactor>\r
+            <!--Optional:-->\r
+            <prod:FlexFactorCalculatedFlag>?</prod:FlexFactorCalculatedFlag>\r
+            <!--Optional:-->\r
+            <prod:CommunityOrRiskIndicator>?</prod:CommunityOrRiskIndicator>\r
+            <!--Optional:-->\r
+            <prod:AssociatesList>\r
+               <!--1 or more repetitions:-->\r
+               <prod:Associate>\r
+                  <prod:AssociateType>?</prod:AssociateType>\r
+                  <prod:NumberOfFreeAssociates>?</prod:NumberOfFreeAssociates>\r
+               </prod:Associate>\r
+            </prod:AssociatesList>\r
+         </gen1:ProductList>\r
+         <!--Optional:-->\r
+         <gen1:CustomerDetails>\r
+            <!--Optional:-->\r
+            <gen1:Postcode>?</gen1:Postcode>\r
+         </gen1:CustomerDetails>\r
+      </gen1:GenerateQuoteRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:jmsPropertyConfig/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="8cd26c80-41f7-4989-96fc-3d8c270966a3" name="Request 26">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://0.0.0.0:18026/SOAPServiceBinding/BSROS_GenerateQuote_NB/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product" xmlns:gen1="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB.2" xmlns:prod1="http://www.theaa.com/CommonServices/Data/Product.2">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <gen1:GenerateQuoteRequest>\r
+         <mes:RequestHeader>\r
+            <!--Optional:-->\r
+            <com:CorrelationId>?</com:CorrelationId>\r
+            <mes:TransactionId>?</mes:TransactionId>\r
+            <mes:Version>?</mes:Version>\r
+            <mes:RequestDateTime>?</mes:RequestDateTime>\r
+            <mes:Source>\r
+               <mes:Domain>?</mes:Domain>\r
+               <mes:Channel>?</mes:Channel>\r
+               <mes:LineOfBusiness>?</mes:LineOfBusiness>\r
+               <mes:Name>?</mes:Name>\r
+               <!--Optional:-->\r
+               <mes:Address>?</mes:Address>\r
+               <!--Optional:-->\r
+               <mes:InstanceId>?</mes:InstanceId>\r
+               <!--Optional:-->\r
+               <mes:ApplicationVersion>?</mes:ApplicationVersion>\r
+               <!--Optional:-->\r
+               <mes:User>?</mes:User>\r
+            </mes:Source>\r
+            <!--Optional:-->\r
+            <mes:MIContext>?</mes:MIContext>\r
+         </mes:RequestHeader>\r
+         <gen1:ProductList>\r
+            <prod1:EffectivePriceDateTime>?</prod1:EffectivePriceDateTime>\r
+            <prod1:PolicyStartDateTime>?</prod1:PolicyStartDateTime>\r
+            <prod1:PolicyEndDateTime>?</prod1:PolicyEndDateTime>\r
+            <!--Optional:-->\r
+            <prod1:OfferCodeDetailList>\r
+               <!--1 or more repetitions:-->\r
+               <prod1:OfferCodeDetail>\r
+                  <prod1:OfferCode>?</prod1:OfferCode>\r
+                  <prod:OfferCodeCategory>?</prod:OfferCodeCategory>\r
+               </prod1:OfferCodeDetail>\r
+            </prod1:OfferCodeDetailList>\r
+            <!--Optional:-->\r
+            <prod1:SourceGroup>?</prod1:SourceGroup>\r
+            <prod1:SourceCode>?</prod1:SourceCode>\r
+            <prod1:Currency>?</prod1:Currency>\r
+            <!--Optional:-->\r
+            <gen1:Tenure>?</gen1:Tenure>\r
+            <!--Optional:-->\r
+            <gen1:ManConYear1>?</gen1:ManConYear1>\r
+            <!--1 or more repetitions:-->\r
+            <gen1:Product>\r
+               <prod1:ProductCode>?</prod1:ProductCode>\r
+               <!--Optional:-->\r
+               <prod1:CoverageList>\r
+                  <!--1 or more repetitions:-->\r
+                  <prod1:Coverage>\r
+                     <prod1:CoverageCode>?</prod1:CoverageCode>\r
+                     <!--Optional:-->\r
+                     <prod1:LimitList>\r
+                        <!--1 or more repetitions:-->\r
+                        <prod1:Limit>\r
+                           <prod1:Type>?</prod1:Type>\r
+                           <prod1:Value>?</prod1:Value>\r
+                        </prod1:Limit>\r
+                     </prod1:LimitList>\r
+                     <!--Optional:-->\r
+                     <prod1:AdditionalData>\r
+                        <prod1:Type>?</prod1:Type>\r
+                        <prod1:Value>?</prod1:Value>\r
+                     </prod1:AdditionalData>\r
+                  </prod1:Coverage>\r
+               </prod1:CoverageList>\r
+            </gen1:Product>\r
+            <!--Optional:-->\r
+            <gen1:VehicleAgeList>\r
+               <!--1 or more repetitions:-->\r
+               <gen1:VehicleAge>?</gen1:VehicleAge>\r
+            </gen1:VehicleAgeList>\r
+            <!--Optional:-->\r
+            <prod1:RequestSurchargeAndFeeList>\r
+               <!--1 or more repetitions:-->\r
+               <prod1:SurchargeOrFee>\r
+                  <prod1:SurchargeRequestType>?</prod1:SurchargeRequestType>\r
+                  <prod1:IsWaived>?</prod1:IsWaived>\r
+                  <prod1:WaivedReason>?</prod1:WaivedReason>\r
+                  <prod1:SurchargeOrFeeCode>?</prod1:SurchargeOrFeeCode>\r
+               </prod1:SurchargeOrFee>\r
+            </prod1:RequestSurchargeAndFeeList>\r
+            <gen1:CoveredPersons>?</gen1:CoveredPersons>\r
+            <!--Optional:-->\r
+            <prod1:AgentDiscountRequestedList>\r
+               <!--1 or more repetitions:-->\r
+               <prod1:AgentDiscountRequested>\r
+                  <prod1:AgentDiscountCode>?</prod1:AgentDiscountCode>\r
+                  <prod1:AgentDiscountType>?</prod1:AgentDiscountType>\r
+                  <prod1:AgentDiscountValue>?</prod1:AgentDiscountValue>\r
+               </prod1:AgentDiscountRequested>\r
+            </prod1:AgentDiscountRequestedList>\r
+            <!--You have a CHOICE of the next 2 items at this level-->\r
+            <!--Optional:-->\r
+            <prod:OfferCode>?</prod:OfferCode>\r
+            <!--Optional:-->\r
+            <prod:FlexFactor>?</prod:FlexFactor>\r
+            <!--Optional:-->\r
+            <prod:FlexFactorCalculatedFlag>?</prod:FlexFactorCalculatedFlag>\r
+            <!--Optional:-->\r
+            <prod:CommunityOrRiskIndicator>?</prod:CommunityOrRiskIndicator>\r
+            <!--Optional:-->\r
+            <prod:AssociatesList>\r
+               <!--1 or more repetitions:-->\r
+               <prod:Associate>\r
+                  <prod:AssociateType>?</prod:AssociateType>\r
+                  <prod:NumberOfFreeAssociates>?</prod:NumberOfFreeAssociates>\r
+               </prod:Associate>\r
+            </prod:AssociatesList>\r
+         </gen1:ProductList>\r
+         <!--Optional:-->\r
+         <gen1:CustomerDetails>\r
+            <!--Optional:-->\r
+            <gen1:Postcode>?</gen1:Postcode>\r
+         </gen1:CustomerDetails>\r
+      </gen1:GenerateQuoteRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:jmsPropertyConfig/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="b2f345aa-37c6-4bb9-902b-c4084ab43ce4" name="Test_Practice">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      <con:setting id="com.eviware.soapui.support.editor.views.xml.form2.FormEditorView@ViewType">All</con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://rh0124v:18026/SOAPServiceBinding/BSROS_GenerateQuote_NB/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB.2" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product.2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gen:GenerateQuoteRequest>
+         <mes:RequestHeader>
+            <!--Optional:-->
+            <mes:TransactionId>RO-NB-1611-313</mes:TransactionId>
+            <mes:Version>1.0</mes:Version>
+            <mes:RequestDateTime>2019-12-04T00:07:40.000Z</mes:RequestDateTime>
+            <mes:Source>
+               <mes:Domain>SALES</mes:Domain>
+               <mes:Channel>SaintyTesting</mes:Channel>
+               <mes:LineOfBusiness>ROS</mes:LineOfBusiness>
+               <mes:Name>Pricing Services</mes:Name>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <mes:User>PS Testing</mes:User>
+            </mes:Source>
+            <!--Optional:-->
+         </mes:RequestHeader>
+         <!--Optional:-->
+         <gen:ProductList>
+            <prod:EffectivePriceDateTime>2019-12-04T00:07:40.000Z</prod:EffectivePriceDateTime>
+            <prod:PolicyStartDateTime>2019-12-04T00:07:40.000Z</prod:PolicyStartDateTime>
+            <prod:PolicyEndDateTime>2020-12-03T00:07:40.000Z</prod:PolicyEndDateTime>
+            <!--Optional:-->
+            <prod:OfferCodeDetailList>
+               <!--1 or more repetitions:-->
+               <prod:OfferCodeDetail>
+                  <prod:OfferCode>DR2YPC25</prod:OfferCode>
+                  <prod:OfferCodeApplicationLevel>1</prod:OfferCodeApplicationLevel>
+               </prod:OfferCodeDetail>
+            </prod:OfferCodeDetailList>
+            <!--Optional:-->
+            <prod:SourceGroup>30</prod:SourceGroup>
+            <prod:SourceCode>F0713</prod:SourceCode>
+            <prod:Currency>GBP</prod:Currency>
+            <!--Optional:-->
+            <!--Optional:-->
+            <gen:ManConYear1>false</gen:ManConYear1>
+            <!--1 or more repetitions:-->
+            <gen:Product>
+               <prod:ProductCode>PRD_UK_0004</prod:ProductCode>
+            </gen:Product>
+            <gen:Product>
+               <prod:ProductCode>PRD_UK_0002</prod:ProductCode>
+               <!--Optional:-->
+            </gen:Product>
+            <!--Optional:-->
+            <!--Optional:-->
+            <gen:CoveredPersons>0</gen:CoveredPersons>
+            <!--Optional:-->
+         </gen:ProductList>
+         <!--Optional:-->
+         <gen:CustomerDetails>
+            <!--Optional:-->
+            <gen:Postcode>BA2 3RD</gen:Postcode>
+         </gen:CustomerDetails>
+      </gen:GenerateQuoteRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="71e1dd1a-a5dc-44ce-aa5e-c29f481d939e" name="Request 18">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://0.0.0.0:18026/SOAPServiceBinding/BSROS_GenerateQuote_NB/</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB.2" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product.2">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <gen:GenerateQuoteRequest>\r
+         <mes:RequestHeader>\r
+            <!--Optional:-->\r
+            <com:CorrelationId>?</com:CorrelationId>\r
+            <mes:TransactionId>?</mes:TransactionId>\r
+            <mes:Version>?</mes:Version>\r
+            <mes:RequestDateTime>?</mes:RequestDateTime>\r
+            <mes:Source>\r
+               <mes:Domain>?</mes:Domain>\r
+               <mes:Channel>?</mes:Channel>\r
+               <mes:LineOfBusiness>?</mes:LineOfBusiness>\r
+               <mes:Name>?</mes:Name>\r
+               <!--Optional:-->\r
+               <mes:Address>?</mes:Address>\r
+               <!--Optional:-->\r
+               <mes:InstanceId>?</mes:InstanceId>\r
+               <!--Optional:-->\r
+               <mes:ApplicationVersion>?</mes:ApplicationVersion>\r
+               <!--Optional:-->\r
+               <mes:User>?</mes:User>\r
+            </mes:Source>\r
+            <!--Optional:-->\r
+            <mes:MIContext>?</mes:MIContext>\r
+         </mes:RequestHeader>\r
+         <!--Optional:-->\r
+         <gen:IndicativePriceFlag>?</gen:IndicativePriceFlag>\r
+         <gen:ProductList>\r
+            <prod:EffectivePriceDateTime>?</prod:EffectivePriceDateTime>\r
+            <prod:PolicyStartDateTime>?</prod:PolicyStartDateTime>\r
+            <prod:PolicyEndDateTime>?</prod:PolicyEndDateTime>\r
+            <!--Optional:-->\r
+            <prod:OfferCodeDetailList>\r
+               <!--1 or more repetitions:-->\r
+               <prod:OfferCodeDetail>\r
+                  <prod:OfferCode>?</prod:OfferCode>\r
+                  <prod:OfferCodeApplicationLevel>?</prod:OfferCodeApplicationLevel>\r
+               </prod:OfferCodeDetail>\r
+            </prod:OfferCodeDetailList>\r
+            <!--Optional:-->\r
+            <prod:SourceGroup>?</prod:SourceGroup>\r
+            <prod:SourceCode>?</prod:SourceCode>\r
+            <prod:Currency>?</prod:Currency>\r
+            <!--Optional:-->\r
+            <gen:Tenure>?</gen:Tenure>\r
+            <!--Optional:-->\r
+            <gen:ManConYear1>?</gen:ManConYear1>\r
+            <!--1 or more repetitions:-->\r
+            <gen:Product>\r
+               <prod:ProductCode>?</prod:ProductCode>\r
+               <!--Optional:-->\r
+               <prod:CoverageList>\r
+                  <!--1 or more repetitions:-->\r
+                  <prod:Coverage>\r
+                     <prod:CoverageCode>?</prod:CoverageCode>\r
+                     <!--Optional:-->\r
+                     <prod:LimitList>\r
+                        <!--1 or more repetitions:-->\r
+                        <prod:Limit>\r
+                           <prod:Type>?</prod:Type>\r
+                           <prod:Value>?</prod:Value>\r
+                        </prod:Limit>\r
+                     </prod:LimitList>\r
+                     <!--Optional:-->\r
+                     <prod:AdditionalData>\r
+                        <prod:Type>?</prod:Type>\r
+                        <prod:Value>?</prod:Value>\r
+                     </prod:AdditionalData>\r
+                  </prod:Coverage>\r
+               </prod:CoverageList>\r
+            </gen:Product>\r
+            <!--Optional:-->\r
+            <gen:VehicleAgeList>\r
+               <!--1 or more repetitions:-->\r
+               <gen:VehicleAge>?</gen:VehicleAge>\r
+            </gen:VehicleAgeList>\r
+            <!--Optional:-->\r
+            <prod:RequestSurchargeAndFeeList>\r
+               <!--1 or more repetitions:-->\r
+               <prod:SurchargeOrFee>\r
+                  <prod:SurchargeRequestType>?</prod:SurchargeRequestType>\r
+                  <prod:IsWaived>?</prod:IsWaived>\r
+                  <prod:WaivedReason>?</prod:WaivedReason>\r
+                  <prod:SurchargeOrFeeCode>?</prod:SurchargeOrFeeCode>\r
+               </prod:SurchargeOrFee>\r
+            </prod:RequestSurchargeAndFeeList>\r
+            <gen:CoveredPersons>?</gen:CoveredPersons>\r
+            <!--Optional:-->\r
+            <prod:AgentDiscountRequestedList>\r
+               <!--1 or more repetitions:-->\r
+               <prod:AgentDiscountRequested>\r
+                  <prod:AgentDiscountCode>?</prod:AgentDiscountCode>\r
+                  <prod:AgentDiscountType>?</prod:AgentDiscountType>\r
+                  <prod:AgentDiscountValue>?</prod:AgentDiscountValue>\r
+               </prod:AgentDiscountRequested>\r
+            </prod:AgentDiscountRequestedList>\r
+         </gen:ProductList>\r
+         <!--Optional:-->\r
+         <gen:CustomerDetails>\r
+            <!--Optional:-->\r
+            <gen:Postcode>?</gen:Postcode>\r
+         </gen:CustomerDetails>\r
+      </gen:GenerateQuoteRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="GenerateQuote"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+</con:operation>
