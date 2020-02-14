@@ -1113,11 +1113,11 @@ def func_write (line, Match)
   <con:testStep type="groovy" name="Payment" id="ecc17eaf-cbca-4efd-af6e-176900fd8b4d">
     <con:settings/>
     <con:config>
-      <script>testRunner.testCase.setPropertyValue( 'ID',  context.expand( '${242RoadAll#ID}' ))
-def ID = context.expand( '${242RoadAll#ID}' )
-def productType = context.expand( '${242RoadAll#PRODUCT_TYPE}' )
-def paymentflag = context.expand( '${242RoadAll#PaymentType}' )
-def SAP,RAP,CMM,M24,CQM
+      <script>testRunner.testCase.setPropertyValue( 'ID',  context.expand( '${RCR126#ID}' ))
+def ID = context.expand( '${RCR126#ID}' )
+def productType = context.expand( '${RCR126#PRODUCT_TYPE}' )
+def paymentflag = context.expand( '${RCR126#PaymentType}' )
+def SAP,RAP,CMM
 
 log.info(paymentflag)
 
@@ -1132,8 +1132,7 @@ if(paymentflag.equals("YYNNN") || paymentflag.equals("YYYYY"))
 if(paymentflag.equals("YYYYY"))
 {
 	CMM="Y"
-	M24="N"
-	CQM="N"
+
 }
 
 int i = Integer.parseInt(context.expand( '${#TestCase#PaymentNumber}' ))
@@ -1187,40 +1186,6 @@ else if(i==3)
 		log.info("Skip Payment CMM")
 		testRunner.testCase.setPropertyValue('PaymentNumber','1')
 		log.info(ID+";"+i+"CMM")
-		testRunner.gotoStepByName("DataSource Loop");		
-	}
-}
-else if(i==4)
-{
-	if(CQM=="Y")
-	{
-		testRunner.testCase.setPropertyValue('payment','CQM');
-		i = i+1
-		testRunner.testCase.setPropertyValue('PaymentNumber',new Integer(i).toString())
-		log.info(ID+";"+i+"CQM")
-	}
-	else 
-	{
-		log.info("Skip Payment CQM")
-		testRunner.testCase.setPropertyValue('PaymentNumber','1')
-		log.info(ID+";"+i+"CQM")
-		testRunner.gotoStepByName("DataSource Loop");		
-	}
-}
-else if(i==5)
-{
-	if(M24=="Y")
-	{
-		testRunner.testCase.setPropertyValue('payment','M24');
-		i = i+1
-		testRunner.testCase.setPropertyValue('PaymentNumber',new Integer(i).toString())
-		log.info (ID+";"+i+"M24")
-	}
-	else 
-	{
-		log.info("Skip Payment M24")
-		testRunner.testCase.setPropertyValue('PaymentNumber','1')
-		log.info (ID+";"+i+"M24")
 		testRunner.gotoStepByName("DataSource Loop");		
 	}
 }
@@ -1796,7 +1761,7 @@ bw.close();</script>
     </con:property>
     <con:property>
       <con:name>ID</con:name>
-      <con:value>568</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>NumOfIterations</con:name>
