@@ -16,20 +16,20 @@ testRunner.testCase.setPropertyValue( 'NumOfIterations',  '0')
 testRunner.testCase.setPropertyValue( 'PaymentNumber', '1')
 
 ////Feb Prices
-//testRunner.testCase.setPropertyValue('RequestDateTime','2019-09-26T07:30:00')
-//testRunner.testCase.setPropertyValue('PolicyStartDateTime','2019-09-26T07:30:00')
-//testRunner.testCase.setPropertyValue('PolicyEndDateTime','2020-09-26T07:30:00')
-//testRunner.testCase.setPropertyValue('TaxDateTime','2019-09-26T07:30:00')
-//testRunner.testCase.setPropertyValue('PriceDate','2019-09-26T07:30:00')
-//testRunner.testCase.setPropertyValue('FeesDate','2019-09-26T07:30:00')
+testRunner.testCase.setPropertyValue('RequestDateTime','2020-02-24T07:30:00')
+testRunner.testCase.setPropertyValue('PolicyStartDateTime','2020-02-24T07:30:00')
+testRunner.testCase.setPropertyValue('PolicyEndDateTime','2021-02-23T23:59:00')
+testRunner.testCase.setPropertyValue('TaxDateTime','2020-02-24T07:30:00')
+testRunner.testCase.setPropertyValue('PriceDate','2020-02-24T07:30:00')
+testRunner.testCase.setPropertyValue('FeesDate','2020-02-24T07:30:00')
 
 //Dec Prices
-testRunner.testCase.setPropertyValue('RequestDateTime','2019-12-05T06:45:00')
-testRunner.testCase.setPropertyValue('PolicyStartDateTime','2019-12-05T06:45:00')
-testRunner.testCase.setPropertyValue('PolicyEndDateTime','2020-12-04T06:45:00')
-testRunner.testCase.setPropertyValue('TaxDateTime','2019-12-05T06:45:00')
-testRunner.testCase.setPropertyValue('PriceDate','2019-12-05T06:45:00')
-testRunner.testCase.setPropertyValue('FeesDate','2019-12-05T06:45:00')
+//testRunner.testCase.setPropertyValue('RequestDateTime','2019-12-05T06:45:00')
+//testRunner.testCase.setPropertyValue('PolicyStartDateTime','2019-12-05T06:45:00')
+//testRunner.testCase.setPropertyValue('PolicyEndDateTime','2020-12-04T06:45:00')
+//testRunner.testCase.setPropertyValue('TaxDateTime','2019-12-05T06:45:00')
+//testRunner.testCase.setPropertyValue('PriceDate','2019-12-05T06:45:00')
+//testRunner.testCase.setPropertyValue('FeesDate','2019-12-05T06:45:00')
 
 //Creates output file
 now=new java.text.SimpleDateFormat("yyyyMMdd'T'HHmmss").format(new Date())
@@ -59,10 +59,10 @@ bw.close();</script>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
         <con:configuration>
-          <file>N:/Road Pricing/00 - NEW FILING STRUCTURE/Testing Team Data/Pricing Service Testing/Testing areas/New business/Offers/05-12-19/Copy of Input For SOAP 051219.xlsx</file>
+          <file>N:/Road Pricing/00 - NEW FILING STRUCTURE/Testing Team Data/Pricing Service Testing/Testing areas/New business/Offers/24-02-20/Band0/Include ACV39 and ONLINEEM/Input For SOAP 24022020_Band0.xlsx</file>
           <worksheet>SOAP</worksheet>
           <cell>A2</cell>
-          <ignoreEmpty>true</ignoreEmpty>
+          <ignoreEmpty>false</ignoreEmpty>
           <evaluateFormulas>false</evaluateFormulas>
         </con:configuration>
       </con:dataSource>
@@ -158,7 +158,7 @@ bw.close();</script>
     <con:config>
       <script>def project = testRunner.testCase.testSuite.project;
 
-testRunner.testCase.setPropertyValue('payment','RAP')
+//testRunner.testCase.setPropertyValue('payment','RAP')
 testRunner.runTestStep( project.testSuites['New242E2EPrice'].testCases['242 NB E2E Testing'].testSteps['Setup_ProductList_XML'] )
 testRunner.runTestStep( project.testSuites['New242E2EPrice'].testCases['242 NB E2E Testing'].testSteps['Setup_Cover_Value'] )
 //testRunner.runTestStep( project.testSuites['242EndtoEndPrice'].testCases['242NB E2E Testing'].testSteps['Calculate Tax%'] )
@@ -640,7 +640,7 @@ testRunner.testCase.setPropertyValue( "AgentDiscountsApplied", strBld2.toString(
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>http://rh0124v:18026/SOAPServiceBinding/BSROS_GenerateQuote_NB/</con:endpoint>
+        <con:endpoint>http://esbpreprod:18026/SOAPServiceBinding/BSROS_GenerateQuote_NB/</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.theaa.com/CommonServices/Message/BS/Road/GenerateQuote_NB.2" xmlns:mes="http://www.theaa.com/CommonServices/Data/Message/MessageHeader.2" xmlns:com="http://www.theaa.com/CommonServices/Data/Common" xmlns:prod="http://www.theaa.com/CommonServices/Data/Product.2">
    <soapenv:Header/>
    <soapenv:Body>
@@ -1113,10 +1113,10 @@ def func_write (line, Match)
   <con:testStep type="groovy" name="Payment" id="ecc17eaf-cbca-4efd-af6e-176900fd8b4d">
     <con:settings/>
     <con:config>
-      <script>testRunner.testCase.setPropertyValue( 'ID',  context.expand( '${RCR126#ID}' ))
-def ID = context.expand( '${RCR126#ID}' )
-def productType = context.expand( '${RCR126#PRODUCT_TYPE}' )
-def paymentflag = context.expand( '${RCR126#PaymentType}' )
+      <script>testRunner.testCase.setPropertyValue( 'ID',  context.expand( '${242RoadAll#ID}' ))
+def ID = context.expand( '${242RoadAll#ID}' )
+def productType = context.expand( '${242RoadAll#PRODUCT_TYPE}' )
+def paymentflag = context.expand( '${242RoadAll#PaymentType}' )
 def SAP,RAP,CMM
 
 log.info(paymentflag)
@@ -1737,7 +1737,7 @@ bw.close();</script>
     </con:property>
     <con:property>
       <con:name>Cover</con:name>
-      <con:value/>
+      <con:value>4</con:value>
     </con:property>
     <con:property>
       <con:name>FeeList_XML</con:name>
@@ -1745,11 +1745,11 @@ bw.close();</script>
     </con:property>
     <con:property>
       <con:name>FeesDate</con:name>
-      <con:value>2019-12-05T06:45:00</con:value>
+      <con:value>2020-02-24T07:30:00</con:value>
     </con:property>
     <con:property>
       <con:name>File</con:name>
-      <con:value>N:/Systems_development/RIO/Road Renewals/Soap UI/Test Results/NBE2E/NBE2EResults20191203T233823.txt</con:value>
+      <con:value>N:/Systems_development/RIO/Road Renewals/Soap UI/Test Results/NBE2E/NBE2EResults20200221T104948.txt</con:value>
     </con:property>
     <con:property>
       <con:name>FileFailed</con:name>
@@ -1761,11 +1761,11 @@ bw.close();</script>
     </con:property>
     <con:property>
       <con:name>ID</con:name>
-      <con:value/>
+      <con:value>142</con:value>
     </con:property>
     <con:property>
       <con:name>NumOfIterations</con:name>
-      <con:value>1592</con:value>
+      <con:value>398</con:value>
     </con:property>
     <con:property>
       <con:name>NumOfValuesFailed</con:name>
@@ -1773,7 +1773,7 @@ bw.close();</script>
     </con:property>
     <con:property>
       <con:name>payment</con:name>
-      <con:value>RAP</con:value>
+      <con:value>CMM</con:value>
     </con:property>
     <con:property>
       <con:name>PaymentNumber</con:name>
@@ -1781,31 +1781,31 @@ bw.close();</script>
     </con:property>
     <con:property>
       <con:name>PolicyEndDateTime</con:name>
-      <con:value>2020-12-04T06:45:00</con:value>
+      <con:value>2021-02-23T23:59:00</con:value>
     </con:property>
     <con:property>
       <con:name>PolicyStartDateTime</con:name>
-      <con:value>2019-12-05T06:45:00</con:value>
+      <con:value>2020-02-24T07:30:00</con:value>
     </con:property>
     <con:property>
       <con:name>PriceDate</con:name>
-      <con:value>2019-12-05T06:45:00</con:value>
+      <con:value>2020-02-24T07:30:00</con:value>
     </con:property>
     <con:property>
       <con:name>ProductList_XML</con:name>
-      <con:value>&lt;gen:Product>&lt;prod:ProductCode>&lt;/prod:ProductCode>&lt;/gen:Product></con:value>
+      <con:value><![CDATA[<gen:Product><prod:ProductCode>PRD_UK_0001</prod:ProductCode></gen:Product><gen:Product><prod:ProductCode>PRD_UK_0003</prod:ProductCode></gen:Product><gen:Product><prod:ProductCode>PRD_UK_0005</prod:ProductCode></gen:Product><gen:Product><prod:ProductCode>PRD_UK_0009</prod:ProductCode></gen:Product>]]></con:value>
     </con:property>
     <con:property>
       <con:name>RequestDateTime</con:name>
-      <con:value>2019-12-05T06:45:00</con:value>
+      <con:value>2020-02-24T07:30:00</con:value>
     </con:property>
     <con:property>
       <con:name>RoadList</con:name>
-      <con:value/>
+      <con:value>PRD_UK_0001</con:value>
     </con:property>
     <con:property>
       <con:name>RoadNameList</con:name>
-      <con:value/>
+      <con:value>Roadside</con:value>
     </con:property>
     <con:property>
       <con:name>TaxType</con:name>
@@ -1813,11 +1813,11 @@ bw.close();</script>
     </con:property>
     <con:property>
       <con:name>TotalOfValuesChecked</con:name>
-      <con:value>187652</con:value>
+      <con:value>43503</con:value>
     </con:property>
     <con:property>
       <con:name>TaxDateTime</con:name>
-      <con:value>2019-12-05T06:45:00</con:value>
+      <con:value>2020-02-24T07:30:00</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
